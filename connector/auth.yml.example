@@ -1,0 +1,7 @@
+sunshine:
+  subdomain: foobar
+  username: test@example.com
+  password: password
+okta:
+  subdomain: barfoo
+  apiKey: apiKey
