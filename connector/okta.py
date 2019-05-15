@@ -40,7 +40,7 @@ class Okta:
         if user is None:
             return {}
 
-        return {
+        profile = {
             'profile': {
                 'source': 'okta',
                 'type': 'user',
@@ -58,6 +58,12 @@ class Okta:
                 }
             }
         }
+
+        for key in user['profile']:
+            if key not in ['email', 'firstName', 'lastName', 'login']:
+                profile['profile']['attributes'][key] = user['profile'][key]
+
+        return profile
 
     @staticmethod
     def parse_pagination_header(header=''):
