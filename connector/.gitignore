@@ -1,0 +1,8 @@
+# Config
+auth.yml
+
+# IntelliJ
+.idea/
+
+# Virtual Environment
+env/
