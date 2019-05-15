@@ -13,9 +13,8 @@ class Sunshine:
             'Authorization': 'Basic {}'.format(encode(username, password))
         }
 
-        print('header', self.headers)
-
     def save_profile(self, profile):
         resp = requests.post('{}/profile'.format(self.url), json=profile, headers=self.headers)
-        print('resp', resp)
+        if resp.status_code != 202:
+            print("Wonky status", resp.status_code)
         return
