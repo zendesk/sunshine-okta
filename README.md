@@ -11,7 +11,7 @@ Make sure to grab the following and refer to auth.yml.example for structure of t
 ## Running it
 ```bash
 
-cp auth.yml.example auth.yml // now go populate it!
+cp auth.yml.example auth.yml # now go populate it!
 
 pip install -r requirements.txt
 
