@@ -46,11 +46,11 @@ class Okta:
                 'type': 'user',
                 'identifiers': {
                     'id': user['id'],
-                    'login': user['profile']['login']
+                    'login': user['profile']['login'],
+                    'email': user['profile']['email'],
                 },
                 'attributes': {
                     'name': '{} {}'.format(user['profile']['firstName'], user['profile']['lastName']),
-                    'primaryEmail': user['profile']['email'],
                     'emails': user['credentials']['emails'],
                     'status': user['status'],
                     'created': user['created'],
