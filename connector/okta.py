@@ -32,7 +32,10 @@ class Okta:
         self.url = 'https://{}.okta.com'.format(subdomain)
         self.users = []
         self.headers = {
-            'Authorization': 'SSWS {}'.format(apiKey)
+            'Authorization': 'SSWS {}'.format(apiKey),
+            'User-Agent': 'ZenShine/1.0',
+            'Content-Type': 'application/json',
+            'accept': 'application/json'
         }
 
     @staticmethod
