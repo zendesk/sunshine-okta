@@ -3,8 +3,6 @@ import sunshine
 import yaml
 import time
 
-OKTA_API_SUBDOMAIN = 'dev-119799'
-SUNSHINE_API_SUBDOMAIN = 'z3nhawaii13'
 
 if __name__ == '__main__':
     with open('auth.yml', 'r') as config_file:
